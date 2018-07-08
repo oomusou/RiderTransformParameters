@@ -28,7 +28,7 @@ namespace ServiceLib.UnitTest
 
         private void AmountShouldBe(decimal expected, DateTime startTime, DateTime endTime)
         {
-            var totalAmount = _stateroomService.TotalAmount(startTime, endTime);
+            var totalAmount = _stateroomService.TotalAmount(new Period(startTime, endTime));
             Assert.AreEqual(expected, totalAmount);
         }
     }
