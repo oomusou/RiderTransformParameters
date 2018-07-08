@@ -20,6 +20,12 @@ namespace ServiceLib.UnitTest
             AmountShouldBe(10m, new DateTime(2018, 7, 7), new DateTime(2018, 7, 7));
         }
 
+        [TestMethod]
+        public void 三天小費30元()
+        {
+            AmountShouldBe(30m, new DateTime(2018, 7, 7), new DateTime(2018, 7, 9));
+        }
+
         private void AmountShouldBe(decimal expected, DateTime startTime, DateTime endTime)
         {
             var totalAmount = _stateroomService.TotalAmount(startTime, endTime);
