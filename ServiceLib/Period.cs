@@ -10,8 +10,8 @@ namespace ServiceLib
             EndTime = endTime;
         }
 
-        public DateTime StartTime { get; private set; }
-        public DateTime EndTime { get; private set; }
+        private DateTime StartTime { get; }
+        private DateTime EndTime { get; }
 
         public int Days => (EndTime - StartTime).Days + 1;
     }
