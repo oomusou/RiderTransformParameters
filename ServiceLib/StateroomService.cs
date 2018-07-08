@@ -6,8 +6,7 @@ namespace ServiceLib
 
         public decimal TotalAmount(Period period)
         {
-            var days = period.Days;
-            return DailyAmount * days;
+            return DailyAmount * period.Days;
         }
     }
 }
