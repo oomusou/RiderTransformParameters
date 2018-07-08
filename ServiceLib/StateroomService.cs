@@ -6,7 +6,9 @@ namespace ServiceLib
     {
         public decimal TotalAmount(DateTime startTime, DateTime endTime)
         {
-            return 10m;
+            var dailyAmount = 10m;
+            var days = (endTime - startTime).Days + 1;
+            return dailyAmount * days;
         }
     }
 }
