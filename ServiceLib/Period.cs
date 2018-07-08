@@ -12,5 +12,11 @@ namespace ServiceLib
 
         public DateTime StartTime { get; private set; }
         public DateTime EndTime { get; private set; }
+
+        public int Days()
+        {
+            var days = (EndTime - StartTime).Days + 1;
+            return days;
+        }
     }
 }
